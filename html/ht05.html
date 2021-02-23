@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>方法</title>
+</head>
+
+<script>
+    'user strict'
+    // var pn={
+    //     name:'球球',
+    //     birth:2020,
+    //     //方法()
+    //     age:function (){
+    //        //今年的年龄
+    //        var now=new Date().getFullYear();
+    //        return now-this.birth;
+    //     }
+    // }
+    // //属性
+    // pn.name;
+    // //方法
+    // pn.age();
+    // function getAge(){
+    //     //今年的年龄
+    //     var now=new Date().getFullYear();
+    //     return now-this.birth;
+    // }
+    // var pn={
+    //     name:'球球',
+    //     birth:2020,
+    //     //方法()
+    //     age:getAge
+    // };
+    // pn.age()//ok
+    // getAge()//NaN
+    // getAge.apply(pn,[])//this 指向pn,参数为空
+   var now=new Date();//now~console.log(now)Sun Feb 07 2021 10:29:52 GMT+0800 (中国标准时间)
+    now.getFullYear();//年
+    now.getMonth();//月 0~11月
+    now.getDate();//日
+    now.getDay();//星期几
+    now.getHours();//时
+    now.getMinutes();//分
+    now.getSeconds();//秒
+    now.getTime();//时间戳全世界统一 1970.1.1 0：00：00毫秒数
+    console.log(new Date(1612665260931))
+
+    var user={
+        name:"cc",
+        age:4
+    }
+    //对象转化为json字符串
+    var jsonUser=JSON.stringify(user);
+    //json 字符串转化为对象 参数为json 字符串
+    var obj=JSON.parse('{"name":"cc","age":4}');
+
+
+
+</script>
+<body>
+
+</body>
+</html>

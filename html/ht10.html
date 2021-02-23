@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>提交表单</title>
+    <script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
+</head>
+<body>
+<form action="#" method="post">
+    <p>  <span>用户名：</span><input type="text" id="username" name="username"required></p>
+    <!--required 属性是一个布尔属性。 required 属性规定必需在提交表单之前填写输入字段。-->
+    <p>  <span>密码：</span><input type="text" id="password" name="password" required></p>
+<!--<input type="submit">-->
+  <!--绑定事件 onclik被点击-->
+    <button type="button" onclick="ss()">提交</button>
+</form>
+<script>
+    function ss(){
+        var uname=document.getElementById('username');
+        var pwd=document.getElementById('password');
+        console.log(uname.value);
+        console.log(pwd.value);
+        //MD5算法
+        pwd.value=md5(pwd.value);
+        console.log(pwd.value);
+    }
+</script>
+</body>
+</html>

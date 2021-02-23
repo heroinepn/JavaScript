@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MD5加密</title>
+</head>
+<body>
+<!--表单绑定标签
+onsubmit=绑定一个提交检测的函数 true false
+将这个结果返回给表单，使用onsubmit接收
+
+-->
+<form action="https://www.baidu.com/" method="post" onsubmit="return sss()">
+    <p>
+        <span>用户名：</span><input type="text" id="username" name="username">
+    </p>
+<p>
+    <span>密码：</span><input type="text" id="input-password" >
+</p>
+    <input type="hidden" id="md5-password" name="password">
+    <!--绑定事件 onclik被点击-->
+    <button type="submit" >提交</button>
+</form>
+<script>
+    function sss(){
+        alert(1);
+        var uname=document.getElementById('username');
+        var pwd=document.getElementById('input-password');
+        var md5pwd=document.getElementById('md5-password');
+        //MD5算法
+        md5pwd.value=md5(pwd.value);
+        //可以校验判断表单内容，true就是通过提交，false，阻止提交
+
+        return true;
+    }
+</script>
+</body>
+</html>

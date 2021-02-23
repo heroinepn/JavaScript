@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery操作DOM事件</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js">
+    </script>
+</head>
+<body>
+<ul id="ul1">
+    <li class="ja">java</li>
+    <li name="js">javaScript</li>
+</ul>
+<script>
+    // document.getElementById()
+    $('#ul1 li[name=js]').text();//获得值
+    $('#ul1 li[name=js]').text('设置值');//设置值
+    $('#ul1').html();//获得值
+    $('#ul1 li[name=js]').css("color","red");
+    $('#ul1 li[name=ja]').show()
+    $('#ul1 li[name=ja]').hide()
+
+</script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM操作</title>
+</head>
+<body>
+<div id="id1">
+</div>
+<p id="js">javaScript</p>
+<div id="list">
+    <p id="se">javaSE</p>
+    <p id="ee">javaEE</p>
+    <p id="me">javaME</p>
+</div>
+
+<script>
+    var id1=document.getElementById('id1');
+    id1.innerText='abc';
+    //添加
+    var  js=document.getElementById('js');
+         list=document.getElementById('list');
+    //list.appendChild(js);<p id="js">javaScript</p>
+    //通过js创建一个新的节点
+    var newP=document.createElement('p');//创建p标签
+    newP.id='newP';
+    newP.innerText='hello DOM';
+    list.appendChild(newP);
+    //创建一个标签节点,通过属性设定值
+    var myScript=document.createElement('script');
+    myScript.setAttribute('type','text/javascript');
+    //创建style 标签
+    var myStyle=document.createElement('style');
+    myStyle.setAttribute('type','text/css');
+    myStyle.innerHTML='body{background-color: chartreuse;}';
+    //document.getElementsByTagName('head')[0].appendChild(myStyle);
+    //body 标签设置背景颜色
+    var body=document.getElementsByTagName('body');
+    body[0].setAttribute('style','background-color: wheat;');
+    //document.getElementsByTagName('body')
+    //HTMLCollection [body]0: bodylength: 1__proto__: HTMLCo
+</script>
+
+
+</body>
+</html>

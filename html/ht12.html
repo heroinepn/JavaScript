@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js">
+    </script>
+</head>
+<body>
+<!-- $(selector).action()-->
+<a href="" id="test-jQuery">ok</a>
+<script>
+    document.getElementById('id')
+    //选择器css的选择器
+    $('#test-jQuery').click(function(){
+        alert('hello');
+    })
+ //原生js选择器
+    //标签
+    document.getElementsByTagName();
+    //ID
+    document.getElementById();
+    //类
+    document.getElementsByClassName();
+    //jQuery css中的选择器都能用
+    $('p').click();//标签选择器
+    $('#id').click();//id
+    $('.class').click()//class
+</script>
+</body>
+</html>

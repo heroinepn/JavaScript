@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM</title>
+
+    <dl id="表格标签">
+        <dt>列表标题</dt>
+        <dd>列表内容</dd>
+        <dd>列表内容</dd>
+    </dl>
+
+    <script>
+        val d1=document.getElementById('表格标签');
+    </script>
+    <div id="f">
+    <h1>标题1</h1>
+    <p id="p1">p1</p>
+    <p class="p2">p2</p>
+    </div>
+    <script>
+        //对应css选择器
+        var h1=document.getElementsByTagName('h1');
+        var p1=document.getElementById('p1');
+        var p2=document.getElementsByClassName('h1');
+        var f=document.getElementById('f');
+        var c=f.children;//获取父节点下的所有子节点
+    </script>
+    <script>
+        //var self=document.getElementById('p1');
+        var father=p1.parentElement;
+        //father.removeChild(self)
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>面向对象</title>
+</head>
+<script>
+    'user strict'
+
+// var user={
+//         name:"cc",
+//         age:3
+// }
+// var obj={//原型
+//         sex:"girl",
+//     run:function (){
+//             console.log(this.name+"\t"+"beautidul"+"\t"+this.sex);
+//     }
+// }  ;
+//   //user的原型是obj
+//   user.__proto__=obj;
+
+
+//   //根据对象找原型
+    function  Student(name){
+        this.name=name;
+    }
+//给student新增一个方法
+    Student.prototype.hello=function (){
+        alert("hello")
+    };
+
+//es6 之后
+//定义一个学生类
+// class Student{
+//     constructor(name) {
+//         this.name=name;
+//     }
+//     hello(){
+//         alert("hello")
+//     }
+// }
+//var cc=new Student("cc")
+
+class minStudent extends Student{
+    constructor(name,grade) {
+        super(name);
+        this.grade=grade;
+    }
+    MyGrade(){
+        alert("grade="+this.grade);
+    }
+}
+    var dd =new minStudent("dd",66)
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<body>
+
+</body>
+</html>

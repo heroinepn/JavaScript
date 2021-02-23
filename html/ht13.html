@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js">
+    </script>
+    <style>
+        #divMove{
+            width:500px;
+            height:500px;
+            border:1px solid red;
+        }
+    </style>
+</head>
+<body>
+<!--cmd+/注释快捷键-->
+mose:<span id="mouseMove"></span>
+<div id="divMove">
+    移动鼠标
+</div>
+<script>
+    //当网页元素加载完毕之后，响应事件
+    //$(document).ready(function (){})
+    $(function () {
+        $('#divMove').mousemove(function (e) {
+          $('#mouseMove').text('x'+e.pageX+'y'+e.pageY)
+        })
+    });
+</script>
+</body>
+</html>
